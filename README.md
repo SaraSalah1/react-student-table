@@ -56,11 +56,11 @@ A modern React application to manage student records. Users can add, edit, delet
 
 - ### Clone the repository
 
-  git clone https://github.com/SaraSalah1/student-management.git
+  git clone https://github.com/SaraSalah1/react-student-table.git
 
 
 - ### Navigate to the project folder
-      cd student-management
+      cd react-student-table
 
 - ### Install dependencies
       npm install
@@ -147,7 +147,7 @@ Contributions are welcome! Follow these steps:
 - ---
 
 👩‍💻 **Created by [Sara Salah](https://github.com/SaraSalah1)**  
-📦 [View the project on GitHub](https://github.com/SaraSalah1/student-management)
+📦 [View the project on GitHub](https://github.com/SaraSalah1/react-student-table)
 
 ---
 
