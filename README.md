@@ -1,90 +1,89 @@
-# 📝 React Student Management Table
+# 📝 React Student Management System
 
-A modern React application for **managing student records**.  
-Users can **add, edit, delete, search, and filter students** by Name, Semester, or Department.  
-The project demonstrates **React Hooks**, **dynamic table updates**, **localStorage persistence**, and **responsive UI** with Tailwind CSS.
-
----
-
-## 🚀 Features
-
-- Add new students with Roll Number, Name, Semester, and Department  
-- Edit student details directly in the table  
-- Delete single or multiple selected students  
-- Search and filter students by Name, Semester, or Department  
-- Select all or individual students using checkboxes  
-- Persistent data stored in browser **localStorage**  
-- Fully responsive design using **Tailwind CSS**  
+A modern React application to **manage student records**.  
+Users can add, edit, delete, search, and filter students by name, semester, or department.  
+The project demonstrates **React Hooks**, **dynamic table updates**, **localStorage persistence**, and **responsive UI design** with **Tailwind CSS**.
 
 ---
 
-## 🎨 Technologies Used
+## 🚀 Key Features
 
-- **React.js**  
-- **JavaScript (ES6)**  
-- **Tailwind CSS**  
-- **HTML5 & CSS3**  
-- **localStorage API**  
+### Student Management
+- Add new students with **roll number, name, semester, and department**.
+- Edit student details directly in table cells.
+- Delete single or multiple selected students.
+- Checkbox selection for all or individual rows.
+- Persistent data saved in **localStorage**.
+
+### Search & Filter
+- Filter students dynamically by **Name**, **Semester**, or **Department**.
+- Select search field from dropdown for flexible filtering.
+
+### Responsive UI
+- Clean, responsive design built with **Tailwind CSS**.
+- Intuitive table layout and user-friendly form inputs.
+
+---
+
+## 🎨 Technology Stack
+
+| Category | Technology | Purpose |
+|----------|------------|---------|
+| Frontend Framework | React.js (Hooks) | Component-based UI and state handling |
+| Styling | Tailwind CSS | Responsive, modern design |
+| Logic | JavaScript (ES6+) | Dynamic table updates, form handling |
+| Storage | localStorage API | Persistent student data |
+| UI Components | HTML5 & CSS3 | Table layout, forms, buttons |
 
 ---
 
 ## 📸 Screenshots
 
-### 1. Main Table View
-<img src="https://github.com/user-attachments/assets/f7f0044a-8dc9-4e69-b613-ff3c14397a08" width="600" />
+### Main Table View
+<img src="https://github.com/user-attachments/assets/f7f0044a-8dc9-4e69-b613-ff3c14397a08" alt="Main Table View" width="600" />
 
-*Displays all students with editable fields and selection checkboxes.*
+### Add Student Form
+<img src="https://github.com/user-attachments/assets/629ba319-a920-4609-84d4-a5c3a169a66d" alt="Add Student Form" width="600" />
 
-### 2. Add Student Form
-<img src="https://github.com/user-attachments/assets/629ba319-a920-4609-84d4-a5c3a169a66d" width="600" />
+### Search & Filter
+<img src="https://github.com/user-attachments/assets/cd44ab8e-7edf-409f-b7bc-a7e67b22e3a1" alt="Search & Filter" width="600" />
 
-*Input fields to add new student records dynamically.*
-
-### 3. Search and Filter
-<img src="https://github.com/user-attachments/assets/cd44ab8e-7edf-409f-b7bc-a7e67b22e3a1" width="600" />
-
-*Select search criteria and filter students in real-time.*
-
-### 4. Delete Action
-<img src="https://github.com/user-attachments/assets/07f82275-b1f7-451a-b4e4-6faeb05ef005" width="600" />
-
-*Delete single or multiple students directly from the table.*
+### Delete Action
+<img src="https://github.com/user-attachments/assets/07f82275-b1f7-451a-b4e4-6faeb05ef005" alt="Delete Action" width="600" />
 
 ---
 
-## 🛠 Installation & Run
+## 🛠 Installation
 
-### 1. Clone the repository
+### Clone Repository
 ```bash
 git clone https://github.com/SaraSalah1/react-student-table.git
 ```
 
-### 2. Navigate to the project folder
+### Navigate to Project Folder
 ```bash
 cd react-student-table
 ```
 
-### 3. Install dependencies
-#### Using npm:
+### Install Dependencies
 ```bash
+# Using npm
 npm install
-```
-#### Using yarn:
-```bash
+
+# Using yarn
 yarn install
 ```
 
-### 4. Start the development server
-#### Using npm:
+### Start Development Server
 ```bash
+# Using npm
 npm start
-```
-#### Using yarn:
-```bash
+
+# Using yarn
 yarn start
 ```
 
-### 5. Open in your browser
+### Open in Browser
 ```
 http://localhost:3000
 ```
@@ -93,19 +92,23 @@ http://localhost:3000
 
 ## 💻 Usage
 
-- Fill in the input fields to add a new student.  
-- Use checkboxes to select single or multiple students.  
-- Click **Add Student** to create a new record.  
-- Click **Delete Selected** to remove selected students.  
-- Select a search field (Name, Semester, Department) from the dropdown and filter students dynamically.  
-- Edit student information directly in table cells.  
-- All updates are saved automatically in **localStorage**.
+### Manage Students
+1. Use **input fields** to enter student name, semester, and department.  
+2. Click **Add Student** to add a new record.  
+3. Select students using **checkboxes** to delete single or multiple rows.  
+4. Edit table cells directly for quick updates.  
+5. Data updates automatically saved in **localStorage**.
+
+### Search & Filter
+1. Select a field (**Name**, **Semester**, **Department**) from the dropdown.  
+2. Type the search keyword in the input field.  
+3. Table dynamically filters results.
 
 ---
 
 ## 🧩 Code Snippets
 
-### ➕ Adding a New Student
+### Adding a New Student
 ```javascript
 const addRow = () => {
   if (!inputs.name) return;
@@ -121,20 +124,26 @@ const addRow = () => {
 };
 ```
 
-### 🔍 Filtering Students
+### Filtering Students
 ```javascript
 const filteredRows = rows.filter((r) =>
   r[searchBy].toLowerCase().includes(search.toLowerCase())
 );
 ```
 
+### Delete Selected Students
+```javascript
+const deleteSelected = () => {
+  setRows(rows.filter((r) => !selectionModel.includes(r.roll)));
+  setSelectionModel([]);
+};
+```
+
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!  
-
-1. Fork the repository  
+1. Fork the repository.  
 2. Create a feature branch:
 ```bash
 git checkout -b feature/YourFeature
@@ -143,19 +152,19 @@ git checkout -b feature/YourFeature
 ```bash
 git commit -m "Add some feature"
 ```
-4. Push the branch:
+4. Push branch:
 ```bash
 git push origin feature/YourFeature
 ```
-5. Open a Pull Request  
+5. Open a Pull Request.
 
 ---
 
-👩‍💻 **Created by [Sara Salah](https://github.com/SaraSalah1)**  
+👩‍💻 **Author:** [Sara Salah](https://github.com/SaraSalah1)  
 📦 **Project Repository:** [react-student-table](https://github.com/SaraSalah1/react-student-table)
 
 ---
 
 ## 📝 License
 
-This project is licensed under the **MIT License**.
+MIT License
